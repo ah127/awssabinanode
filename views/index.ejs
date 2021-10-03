@@ -1,0 +1,144 @@
+<%- include('includes/head.ejs') %> 
+</head>
+<body>
+    <%- include('includes/navigation.ejs') %> 
+    <!-- particles.js container -->
+    <div id="particles-js">
+        <section class="banner">
+          <h1>Get Your Buisness Online Today</h1>
+          <p>We are the innovative team combining our best skills and resources to get your business online through complete digital solution and marketing.</p>
+          <div class="bgs-pr-button">
+            <a href="#contact_form">Hire Us</a>
+          </div>
+          <a class="down_arrow" id="down_arrow" href="#research">
+            <i class="fas fa-arrow-down fa-2x"></i>
+          </a>
+        </section>
+      </div>
+  
+      <section class="research" id="services">
+        <h2>How Can We Help You?</h2>
+        <div class="row">
+          <div class="research_image">
+            <i class="fas fa-globe-americas"></i>
+          </div>
+          <div class="research_description">
+              <h3>Web Design & Development</h3>
+              <p>Bigdata Solutions provides world class services to design blazing fast websites for your buisness, protfolio and orgarnization.</p>
+          </div>
+        </div>
+  
+        <div class="row machine_learning">
+          <div class="research_image">
+            <i class="fas fa-mobile"></i>
+          </div>
+          <div class="research_description">
+            <h3>Mobile App</h3>
+            <p>Reach your business in hand of 5 billion smartphones through mobile app development service lead by our top UI/UX team.</p>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="research_image">
+            <i class="fas fa-sort-numeric-up"></i>
+          </div>
+          <div class="research_description">
+              <h3>SEO</h3>
+              <p>Bring your website to the top of the famous search-engine like Google and Bing.</p>
+            </div>
+        </div>
+
+        <div class="row machine_learning">
+          <div class="research_image">
+            <i class="fas fa-bullhorn"></i>
+          </div>
+          <div class="research_description">
+            <h3>Digital Marketing</h3>
+            <p>Let your products to be advertised to targeted users in Facebook</p>
+          </div>
+        </div>
+      </section>
+  
+      <section class="research" id="research">
+        <h2>Our Researches</h2>
+        <div class="row">
+          <div class="research_image">
+            <i class="fab fa-bitcoin"></i>
+          </div>
+          <div class="research_description">
+              <h3>Cryptocurrency</h3>
+              <p>We are developing decentralized cryptocurrency using blockchain technology and soon will be distributed to the global network. It will be integrated with our e-commerce product also.</p>
+          </div>
+        </div>
+  
+        <div class="row machine_learning">
+          <div class="research_image">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="research_description">
+            <h3>Machine Learning</h3>
+            <p>The fututre of technology is full of software and hardwares backed my Artifical Intelligence and Machine Learing. We are developing Object detection using Tensoflow (Machine Learning Library).</p>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="research_image">
+            <i class="fas fa-cart-plus"></i>
+          </div>
+          <div class="research_description">
+              <h3>E-commerce</h3>
+              <p>Since the COVID-19 pandemic we realized that how importantly the Digital Commerce plays role in supplying prodcuts to the costumers. With that in mind we are developing a ecommerce project.</p>
+            </div>
+        </div>
+      </section>
+  
+      <section class="working_process" id="working_process">
+        <h2>Development & Delivery</h2>
+        <img src="/images/agile.png" alt="agile">
+      </section>
+  
+      <section class="contact_form" id="contact_form">
+       <div class="contact_form_info">
+         <h2>Send us a message</h2>
+         <span>If you have any queries feel free to send us message anytime</span>
+         <div class="social_icons">
+           <a href="https://www.facebook.com/bigdatawebdesign" target="_blank">
+            <span style="color:#3b5998">
+              <i class="fab fa-facebook fa-2x"></i>
+            </span>
+          </a>
+          <span style="color: #00acee;">
+            <i class="fab fa-twitter-square fa-2x"></i>
+          </span>
+          <span style="color: #0e76a8;">
+            <i class="fab fa-linkedin fa-2x"></i>
+          </span>
+          <span style="color: #ff0000">
+            <i class="fab fa-youtube-square fa-2x"></i>
+          </span>
+          </div>
+          <address>
+            Head Office<br>
+            Kathmandu, Nepal<br>
+            +977 9803796594
+          </address>
+       </div>
+       <div class="form_feilds">
+        <% if (errorMessage) { %>
+          <div class="form-message"><%= errorMessage %> </div>
+        <% } %>
+        <form action="/contact" method="POST">
+          <label for="fname">NAME <sup>*</sup></label>
+          <input type="text" name="fname" id="fname" placeholder="Your Name" required>
+          <label for="fname">EMAIL <sup>*</sup></label>
+          <input type="email" name="email" id="email" placeholder="Email Address" required>
+          <label for="message">MESSAGE</label>
+          <textarea name="message" id="message" cols="30" rows="10" placeholder="Please add your message here"></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+       </div>
+      </section>
+<%- include('includes/footer.ejs') %>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script src="/javascripts/particles.js"></script>
+<%- include('includes/end.ejs') %>
